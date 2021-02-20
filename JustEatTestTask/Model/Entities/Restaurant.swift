@@ -5,6 +5,7 @@ struct Restaurant {
     var rating: Double
     var name: String
     var logo: Logo
+    var cuisineTypes: [String]
 }
 
 struct Logo {

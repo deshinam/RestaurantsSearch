@@ -57,7 +57,7 @@ final class RatingView: UIView {
             make.leading.equalTo(self.snp.leading)
             make.top.equalTo(self.snp.top)
             make.bottom.equalTo(self.snp.bottom)
-            make.size.equalTo(CGSize(width: 20, height: 20))
+            make.size.equalTo(CGSize(width: 15, height: 15))
         }
         
         starValueLabel.snp.makeConstraints { make in

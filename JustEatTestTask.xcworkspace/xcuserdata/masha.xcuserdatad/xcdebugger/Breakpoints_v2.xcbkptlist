@@ -7,23 +7,55 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "DD7187CC-BC8C-4E5F-9681-C7F1FB9555D2"
+            uuid = "48EFB696-D820-4254-98E9-A742DC555C05"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JustEatTestTask/Network/NetworkManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
             landmarkName = "downloadPhotos(restaurants:)"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "48EFB696-D820-4254-98E9-A742DC555C05 - 7d2c4472cccecbc2"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "JustEatTestTask.NetworkManager.(downloadPhotos in _1A633228B39A809D4AB9CA62FFCA9A13)(restaurants: Swift.Optional&lt;Swift.Array&lt;JustEatTestTask.Restaurant&gt;&gt;) -&gt; PromiseKit.Promise&lt;Swift.Optional&lt;Swift.Array&lt;JustEatTestTask.Restaurant&gt;&gt;&gt;"
+                  moduleName = "JustEatTestTask"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/masha/Desktop/Apps/JustEatTestTask/JustEatTestTask/Network/NetworkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "65"
+                  endingLineNumber = "65"
+                  offsetFromSymbolStart = "853">
+               </Location>
+               <Location
+                  uuid = "48EFB696-D820-4254-98E9-A742DC555C05 - 76a67d71b04aae2a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #2 (Swift.Array&lt;PromiseKit.Result&lt;()&gt;&gt;) -&gt; Swift.Optional&lt;Swift.Array&lt;JustEatTestTask.Restaurant&gt;&gt; in JustEatTestTask.NetworkManager.(downloadPhotos in _1A633228B39A809D4AB9CA62FFCA9A13)(restaurants: Swift.Optional&lt;Swift.Array&lt;JustEatTestTask.Restaurant&gt;&gt;) -&gt; PromiseKit.Promise&lt;Swift.Optional&lt;Swift.Array&lt;JustEatTestTask.Restaurant&gt;&gt;&gt;"
+                  moduleName = "JustEatTestTask"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/masha/Desktop/Apps/JustEatTestTask/JustEatTestTask/Network/NetworkManager.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "16">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "0C7A7CAC-A1F0-4486-92A2-F749F42FE67B"
+            uuid = "C01B0F94-277E-4840-92F7-86298FD2C638"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -39,31 +71,15 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "AC9C4FB0-2F51-4948-9993-37952857926C"
-            shouldBeEnabled = "Yes"
+            uuid = "D21C63B6-BDF4-48C5-AEDA-F42C256B3F27"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "JustEatTestTask/Network/NetworkManager.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
-            landmarkName = "downloadPhotos(restaurants:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "1FB86C93-F9EE-46A7-985C-D639686DDA07"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "JustEatTestTask/Network/NetworkManager.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
             landmarkName = "downloadPhotos(restaurants:)"
             landmarkType = "7">
          </BreakpointContent>
