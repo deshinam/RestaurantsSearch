@@ -95,6 +95,16 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		C792AC6925E18FC100D38243 /* ListOfRestaurants */ = {
+			isa = PBXGroup;
+			children = (
+				C7F3F1F225E0012C00451F8B /* ListOfRestaurantsPresenter.swift */,
+				C7F3F1F525E0015C00451F8B /* ListOfRestaurantsConfigurator.swift */,
+				C7F3F1F025E000E000451F8B /* ListOfRestaurantsViewController */,
+			);
+			path = ListOfRestaurants;
+			sourceTree = "<group>";
+		};
 		C7F3F1C525DFF88100451F8B = {
 			isa = PBXGroup;
 			children = (
@@ -123,7 +133,7 @@
 				C7F3F1DA25DFF88400451F8B /* Assets.xcassets */,
 				C7F3F1DC25DFF88400451F8B /* LaunchScreen.storyboard */,
 				C7F3F1DF25DFF88400451F8B /* Info.plist */,
-				C7F3F1F025E000E000451F8B /* ListOfRestaurantsViewController */,
+				C792AC6925E18FC100D38243 /* ListOfRestaurants */,
 			);
 			path = JustEatTestTask;
 			sourceTree = "<group>";
@@ -133,8 +143,6 @@
 			children = (
 				C7F3F20025E006FC00451F8B /* Views */,
 				C7F3F1E925E0007800451F8B /* ListOfRestaurantsTableViewController.swift */,
-				C7F3F1F225E0012C00451F8B /* ListOfRestaurantsPresenter.swift */,
-				C7F3F1F525E0015C00451F8B /* ListOfRestaurantsConfigurator.swift */,
 				C7F3F1FE25E0035C00451F8B /* Cells */,
 			);
 			path = ListOfRestaurantsViewController;
