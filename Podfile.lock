@@ -1,0 +1,55 @@
+PODS:
+  - Alamofire (5.4.1)
+  - AlamofireImage (4.1.0):
+    - Alamofire (~> 5.1)
+  - PromiseKit (6.13.1):
+    - PromiseKit/CorePromise (= 6.13.1)
+    - PromiseKit/Foundation (= 6.13.1)
+    - PromiseKit/UIKit (= 6.13.1)
+  - PromiseKit/CorePromise (6.13.1)
+  - PromiseKit/Foundation (6.13.1):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (6.13.1):
+    - PromiseKit/CorePromise
+  - Realm (10.5.2):
+    - Realm/Headers (= 10.5.2)
+  - Realm/Headers (10.5.2)
+  - RealmSwift (10.5.2):
+    - Realm (= 10.5.2)
+  - SnapKit (5.0.1)
+  - SwiftLint (0.42.0)
+  - SwiftyJSON (4.3.0)
+
+DEPENDENCIES:
+  - Alamofire (~> 5.2)
+  - AlamofireImage (~> 4.1)
+  - PromiseKit (~> 6.8)
+  - RealmSwift
+  - SnapKit (~> 5.0.0)
+  - SwiftLint
+  - SwiftyJSON (~> 4.0)
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - AlamofireImage
+    - PromiseKit
+    - Realm
+    - RealmSwift
+    - SnapKit
+    - SwiftLint
+    - SwiftyJSON
+
+SPEC CHECKSUMS:
+  Alamofire: 2291f7d21ca607c491dd17642e5d40fdcda0e65c
+  AlamofireImage: c4a2ba349885fb3064feb74d2e547bd42ce9be10
+  PromiseKit: 28fda91c973cc377875d8c0ea4f973013c05b6db
+  Realm: 2e1bc0d28301006176692da234deff51f867d5ae
+  RealmSwift: a522ad39715e8b4e491af4460059bc32b84f5a9b
+  SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
+  SwiftLint: 4fa9579c63416865179bc416f0a92d55f009600d
+  SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
+
+PODFILE CHECKSUM: cb75da39b424f6137b4b610ae80fda50fd67316c
+
+COCOAPODS: 1.10.1
