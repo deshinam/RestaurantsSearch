@@ -17,6 +17,7 @@ final class RatingView: UIView {
         static let cityLabelColor: UIColor = .black
         static let defaultValue: Double = 0.0
         static let starImage: UIImage = UIImage(systemName: "star.fill") ?? UIImage()
+        static let starImageSize: CGFloat = 15
     }
     
     private var starImage: UIImageView = {
@@ -24,7 +25,7 @@ final class RatingView: UIView {
         image.contentMode = .scaleAspectFill
         image.translatesAutoresizingMaskIntoConstraints = false
         image.image = Constants.starImage
-        image.tintColor = .gray
+        image.tintColor = .systemOrange
         return image
     }()
     
@@ -57,7 +58,7 @@ final class RatingView: UIView {
             make.leading.equalTo(self.snp.leading)
             make.top.equalTo(self.snp.top)
             make.bottom.equalTo(self.snp.bottom)
-            make.size.equalTo(CGSize(width: 15, height: 15))
+            make.size.equalTo(CGSize(width: Constants.starImageSize, height: Constants.starImageSize))
         }
         
         starValueLabel.snp.makeConstraints { make in

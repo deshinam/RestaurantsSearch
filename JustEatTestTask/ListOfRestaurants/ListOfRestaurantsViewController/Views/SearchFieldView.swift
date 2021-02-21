@@ -15,10 +15,11 @@ final class SearchFieldView: UIView {
         static let defaultValue: Double = 0.0
         static let locationImage: UIImage = UIImage(systemName: "location.fill") ?? UIImage()
         static let searchImage: UIImage = UIImage(systemName: "magnifyingglass") ?? UIImage()
+        static let searchFieldPlaceholder = "Search by postcode"
     }
 
     private lazy var locationButton: UIButton = {
-        let button = UIButton()
+        let button = UIButton(type: .system)
         button.contentMode = .scaleAspectFill
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(Constants.locationImage, for: .normal)
@@ -27,7 +28,7 @@ final class SearchFieldView: UIView {
     }()
 
     private lazy var searchButton: UIButton = {
-        let button = UIButton()
+        let button = UIButton(type: .system)
         button.contentMode = .scaleAspectFill
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(Constants.searchImage, for: .normal)
@@ -39,7 +40,7 @@ final class SearchFieldView: UIView {
     private lazy var searchTextField: UITextField = {
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.placeholder = "Search by postcode"
+        textField.placeholder = Constants.searchFieldPlaceholder
         return textField
     }()
 
@@ -88,6 +89,7 @@ final class SearchFieldView: UIView {
             make.trailing.equalTo(locationButton.snp.trailing).inset(10)
         }
         searchTextField.becomeFirstResponder()
+        searchTextField.addTarget(self, action: #selector(searchCityButtonTapped(sender:)), for: .editingDidEndOnExit)
     }
 
     @objc private func searchCityButtonTapped(sender: UIButton) {
@@ -122,6 +124,5 @@ final class SearchFieldView: UIView {
     func updatePostCode(postcode: String) {
         searchTextField.text = postcode
     }
-
 }
 

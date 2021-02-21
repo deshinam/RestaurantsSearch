@@ -5,7 +5,7 @@ final class ShortRestaurantInfoTableViewCell: UITableViewCell {
     var restaurant: Restaurant? {
         didSet {
             restaurantNameLabel.text = restaurant?.name
-            restaurantLogoImage.image = restaurant?.logo.image
+            restaurantLogoImage.image = restaurant?.logo.image ?? Constants.restaurantDefaultLogo
             ratingView.currentValue = restaurant?.rating ?? 0
             cuisinesLabel.text = restaurant?.cuisineTypes.map {$0}.joined(separator: ", ")
         }
@@ -16,11 +16,14 @@ final class ShortRestaurantInfoTableViewCell: UITableViewCell {
         static let restaurantLabelFont: CGFloat = 16
         static let restaurantLabelColor: UIColor = .black
         static let restaurantLogoImageSize: CGFloat = 60
+        static let restaurantDefaultLogo = UIImage(systemName: "timelapse")
     }
 
     lazy private var restaurantLogoImage: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.image = Constants.restaurantDefaultLogo
+        imageView.tintColor = .gray
         return imageView
     }()
 

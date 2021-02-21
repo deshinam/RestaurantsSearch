@@ -1,11 +1,5 @@
-//
-//  ListOfRestaurantsTests.swift
-//  ListOfRestaurantsTests
-//
-//  Created by Машенька on 20.02.2021.
-//
-
 import XCTest
+@testable import JustEatTestTask
 
 class ListOfRestaurantsTests: XCTestCase {
 
@@ -17,9 +11,10 @@ class ListOfRestaurantsTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
     }
 
-    func testExample() throws {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testGetNoRestaurantsFoundedLabel() throws {
+        let postCode = "EC4M"
+        let networkManager = NetworkManager.sharedNetworkManager
+
     }
 
     func testPerformanceExample() throws {

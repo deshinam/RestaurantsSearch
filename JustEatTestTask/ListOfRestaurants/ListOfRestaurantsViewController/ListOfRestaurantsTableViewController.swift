@@ -48,6 +48,11 @@ final class ListOfRestaurantsTableViewController: UIViewController {
         setUpSearchBar()
         view.backgroundColor = .white
     }
+
+    override func viewWillDisappear(_ animated: Bool) {
+        searchFieldView.unsubscribeSearchButton(self)
+        searchFieldView.unsubscribeLocationButton(self)
+    }
     
     // MARK: — Private Methods
     private func setUpSearchBar() {
