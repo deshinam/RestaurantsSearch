@@ -7,7 +7,7 @@ final class ShortRestaurantInfoTableViewCell: UITableViewCell {
             restaurantNameLabel.text = restaurant?.name
             restaurantLogoImage.image = restaurant?.logo.image ?? Constants.restaurantDefaultLogo
             ratingView.currentValue = restaurant?.rating ?? 0
-            cuisinesLabel.text = restaurant?.cuisineTypes.map {$0}.joined(separator: ", ")
+            cuisinesLabel.text = restaurant?.transformCuisineTypesToString(array: restaurant?.cuisineTypes ?? [])
         }
     }
 
@@ -19,7 +19,8 @@ final class ShortRestaurantInfoTableViewCell: UITableViewCell {
         static let restaurantDefaultLogo = UIImage(systemName: "timelapse")
     }
 
-    lazy private var restaurantLogoImage: UIImageView = {
+    // MARK: — Internal Properties
+    internal lazy var restaurantLogoImage: UIImageView = {
         let imageView = UIImageView()
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.image = Constants.restaurantDefaultLogo
@@ -27,22 +28,22 @@ final class ShortRestaurantInfoTableViewCell: UITableViewCell {
         return imageView
     }()
 
-    lazy private var restaurantNameLabel: UILabel = {
+    internal lazy var restaurantNameLabel: UILabel = {
         let lbl = UILabel()
         lbl.textColor = Constants.restaurantLabelColor
         lbl.font = UIFont.boldSystemFont(ofSize: Constants.restaurantLabelFont)
         lbl.textAlignment = .left
         lbl.translatesAutoresizingMaskIntoConstraints = false
-    return lbl
+        return lbl
     }()
 
-    lazy private var ratingView: RatingView = {
+    internal lazy var ratingView: RatingView = {
         let view = RatingView()
         view.translatesAutoresizingMaskIntoConstraints = false
-    return view
+        return view
     }()
 
-    private lazy var cuisinesLabel: UILabel = {
+    internal lazy var cuisinesLabel: UILabel = {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
         lbl.numberOfLines = 2
@@ -55,9 +56,25 @@ final class ShortRestaurantInfoTableViewCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setUpCell()
     }
-    
+
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        clean()
+    }
+    // MARK: — Public Methods
+
+    func prepareForDraw() {
+        guard let url = URL(string: restaurant?.logo.url ?? "") else {return}
+        restaurantLogoImage.af.setImage(
+            withURL: url,
+            placeholderImage: Constants.restaurantDefaultLogo,
+            filter: nil,
+            imageTransition: .crossDissolve(0.2)
+        )
     }
 
     // MARK: — Private Methods
@@ -93,4 +110,10 @@ final class ShortRestaurantInfoTableViewCell: UITableViewCell {
         }
     }
 
+    private func clean() {
+        restaurantNameLabel.text = ""
+        restaurantLogoImage.image = Constants.restaurantDefaultLogo
+        ratingView.currentValue = 0
+        cuisinesLabel.text = ""
+    }
 }

@@ -1,0 +1,149 @@
+{
+    "Id": 97680,
+    "Name": "Forno Pizza",
+    "UniqueName": "forno-pizza-new-lambeth",
+    "Address": {
+      "City": "London",
+      "FirstLine": "145-147 Lambeth Walk",
+      "Postcode": "SE11 6EE",
+      "Latitude": 51.492696,
+      "Longitude": -0.11634
+    },
+    "City": "London",
+    "Postcode": "SE11 6EE",
+    "Latitude": 0.0,
+    "Longitude": 0.0,
+    "Rating": {
+      "Count": 306,
+      "Average": 4.88,
+      "StarRating": 4.88
+    },
+    "RatingStars": 4.88,
+    "NumberOfRatings": 306,
+    "RatingAverage": 4.88,
+    "Description": "",
+    "Url": "https://www.just-eat.co.uk/restaurants-forno-pizza-new-lambeth",
+    "LogoUrl": "http://d30v2pzvrfyzpo.cloudfront.net/uk/images/restaurants/97680.gif",
+    "IsTestRestaurant": false,
+    "IsHalal": false,
+    "IsNew": false,
+    "ReasonWhyTemporarilyOffline": "",
+    "DriveDistance": 1.7,
+    "DriveInfoCalculated": true,
+    "IsCloseBy": false,
+    "OfferPercent": 10.0,
+    "NewnessDate": "2019-07-03T13:23:08.808938",
+    "OpeningTime": "2021-02-20T11:00:00Z",
+    "OpeningTimeUtc": null,
+    "OpeningTimeIso": "2021-02-20T11:00:00",
+    "OpeningTimeLocal": "2021-02-20T11:00:00",
+    "DeliveryOpeningTimeLocal": "2021-02-19T11:00:00",
+    "DeliveryOpeningTime": "2021-02-19T11:00:00Z",
+    "DeliveryOpeningTimeUtc": null,
+    "DeliveryStartTime": "2021-02-19T11:00:00Z",
+    "DeliveryTime": null,
+    "DeliveryTimeMinutes": null,
+    "DeliveryWorkingTimeMinutes": 45,
+    "DeliveryEtaMinutes": {
+      "Approximate": null,
+      "RangeLower": 35,
+      "RangeUpper": 50
+    },
+    "IsCollection": true,
+    "IsDelivery": true,
+    "IsFreeDelivery": true,
+    "IsOpenNowForCollection": true,
+    "IsOpenNowForDelivery": true,
+    "IsOpenNowForPreorder": false,
+    "IsOpenNow": true,
+    "IsTemporarilyOffline": false,
+    "DeliveryMenuId": 357645,
+    "CollectionMenuId": null,
+    "DeliveryZipcode": null,
+    "DeliveryCost": 0.0,
+    "MinimumDeliveryValue": 12.0,
+    "SecondDateRanking": 0.0,
+    "DefaultDisplayRank": 0,
+    "SponsoredPosition": 1,
+    "SecondDateRank": 0.0,
+    "Score": 1072.0,
+    "IsTemporaryBoost": false,
+    "IsSponsored": true,
+    "IsPremier": false,
+    "HygieneRating": null,
+    "ShowSmiley": false,
+    "SmileyDate": null,
+    "SmileyElite": false,
+    "SmileyResult": null,
+    "SmileyUrl": null,
+    "SendsOnItsWayNotifications": false,
+    "BrandName": "",
+    "IsBrand": false,
+    "LastUpdated": "2021-02-19T11:45:16.578401",
+    "Deals": [
+      {
+        "Description": "10% off when you spend £20",
+        "DiscountPercent": 10.0,
+        "QualifyingPrice": 20.0,
+        "OfferType": "Percent",
+        "OfferId": "193600788",
+        "CampaignId": null,
+        "ConsumerSegment": "All"
+      }
+    ],
+    "Offers": [
+      {
+        "Type": "Percent",
+        "Amount": 10.0,
+        "QualifyingValue": 20.0,
+        "MaxQualifyingValue": 0.0,
+        "Description": "10% off when you spend £20",
+        "ConsumerSegment": "All",
+        "OfferId": "193600788"
+      }
+    ],
+    "Logo": [
+      {
+        "StandardResolutionURL": "http://d30v2pzvrfyzpo.cloudfront.net/uk/images/restaurants/97680.gif"
+      }
+    ],
+    "Tags": [],
+    "DeliveryChargeBands": [],
+    "CuisineTypes": [
+      {
+        "Id": 82,
+        "IsTopCuisine": true,
+        "Name": "Pizza",
+        "SeoName": "pizza"
+      },
+      {
+        "Id": 27,
+        "IsTopCuisine": true,
+        "Name": "Italian",
+        "SeoName": "italian"
+      }
+    ],
+    "Cuisines": [
+      {
+        "Name": "Pizza",
+        "SeoName": "pizza"
+      },
+      {
+        "Name": "Italian",
+        "SeoName": "italian"
+      }
+    ],
+    "ScoreMetaData": [
+      {
+        "Key": "Distance",
+        "Value": "1.7"
+      },
+      {
+        "Key": "SetName",
+        "Value": "Sponsored"
+      }
+    ],
+    "Badges": [],
+    "OpeningTimes": [],
+    "ServiceableAreas": []
+  }

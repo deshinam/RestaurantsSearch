@@ -37,7 +37,7 @@ final class SearchFieldView: UIView {
         return button
     }()
 
-    private lazy var searchTextField: UITextField = {
+    internal lazy var searchTextField: UITextField = {
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
         textField.placeholder = Constants.searchFieldPlaceholder
@@ -94,10 +94,12 @@ final class SearchFieldView: UIView {
 
     @objc private func searchCityButtonTapped(sender: UIButton) {
         searchButtonObservers.forEach({ $0.searchButtonClicked(postCode: searchTextField.text ?? "")})
+        searchTextField.resignFirstResponder()
     }
 
     @objc private func locationButtonTapped(sender: UIButton) {
         locationButtonObservers.forEach({ $0.locationButtonClicked()})
+        searchTextField.resignFirstResponder()
     }
 
     // MARK: — Public Methods
@@ -125,4 +127,3 @@ final class SearchFieldView: UIView {
         searchTextField.text = postcode
     }
 }
-
