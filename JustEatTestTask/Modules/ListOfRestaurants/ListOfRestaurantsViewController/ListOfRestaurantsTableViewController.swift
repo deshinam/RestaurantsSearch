@@ -1,14 +1,13 @@
 import UIKit
 import SnapKit
 
-protocol ListOfRestaurantsTableViewControllerProtocol {
+protocol ListOfRestaurantsTableViewControllerProtocol: class {
     func setPresenter(presenter: ListOfRestaurantsPresenterProtocol)
     func updateTableView(isEmpty: Bool)
 }
 internal typealias ViewControllerProtocols = ListOfRestaurantsTableViewControllerProtocol & LocationDelegate
 
 final class ListOfRestaurantsTableViewController: UIViewController {
-
     // MARK: — Private Properties
     private struct Constants {
         static let cellIdentifier = "ShortRestaurantInfoTableViewCell"
@@ -21,7 +20,6 @@ final class ListOfRestaurantsTableViewController: UIViewController {
     }
 
     private var listOfRestaurantsPresenter: ListOfRestaurantsPresenterProtocol?
-    internal lazy var searchFieldView = SearchFieldView()
     private lazy var tableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -29,6 +27,7 @@ final class ListOfRestaurantsTableViewController: UIViewController {
         tableView.separatorStyle = .none
         return tableView
     }()
+
     private lazy var defaultLabel: UILabel = {
         let lbl = UILabel()
         lbl.translatesAutoresizingMaskIntoConstraints = false
@@ -37,23 +36,26 @@ final class ListOfRestaurantsTableViewController: UIViewController {
         lbl.text = Constants.restaurantsNotFoundText
         return lbl
     }()
-    private lazy var spinnerView: UIView = UIView()
+
+    private lazy var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView.init(style: .large)
+
+    // MARK: — Internal Properties
+    internal lazy var searchFieldView = SearchFieldView()
 
     // MARK: — Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpView()
+    }
+
+    // MARK: — Private Methods
+    private func setUpView() {
         setUpTableView()
         setUpDefaultLabel()
         setUpSearchBar()
         view.backgroundColor = .white
     }
 
-    override func viewWillDisappear(_ animated: Bool) {
-        searchFieldView.unsubscribeSearchButton(self)
-        searchFieldView.unsubscribeLocationButton(self)
-    }
-
-    // MARK: — Private Methods
     private func setUpSearchBar() {
         view.addSubview(searchFieldView)
         searchFieldView.snp.makeConstraints { make in
@@ -62,8 +64,15 @@ final class ListOfRestaurantsTableViewController: UIViewController {
             make.top.equalTo(view.safeAreaLayoutGuide.snp.top)
             make.height.equalTo(60)
         }
-        searchFieldView.subscribeSearchButton(self)
-        searchFieldView.subscribeLocationButton(self)
+        searchFieldView.locationButtonTappedAction = {[weak self] in
+            self?.listOfRestaurantsPresenter?.getLocation()
+        }
+        searchFieldView.searchPostCodeButtonTappedAction = {[weak self] postCode in
+            if postCode.count>1 {
+                self?.displaySpinner()
+                self?.listOfRestaurantsPresenter?.getRestaurants(by: postCode)
+            }
+        }
         let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
         view.addGestureRecognizer(tapGesture)
     }
@@ -94,23 +103,13 @@ final class ListOfRestaurantsTableViewController: UIViewController {
     }
 
     private func displaySpinner() {
-        spinnerView = UIView.init(frame: view.bounds)
-        spinnerView.backgroundColor = Constants.spinnerColor
-        let ai = UIActivityIndicatorView.init(style: .large)
-        ai.startAnimating()
-        ai.center = spinnerView.center
-
-        DispatchQueue.main.async {[weak self] in
-            self?.spinnerView.addSubview(ai)
-            self?.view.addSubview(self?.spinnerView ?? UIView())
-        }
-        view.addSubview(spinnerView)
+        activityIndicator.startAnimating()
+        activityIndicator.center = tableView.center
+        view.addSubview(activityIndicator)
     }
 
     private func removeSpinner() {
-        DispatchQueue.main.async {[weak self] in
-            self?.spinnerView.removeFromSuperview()
-        }
+        activityIndicator.removeFromSuperview()
     }
 
     private func showPostCodeNotFoundNotification() {
@@ -139,19 +138,6 @@ extension ListOfRestaurantsTableViewController: UITableViewDelegate, UITableView
 
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         listOfRestaurantsPresenter?.willDrawCell(cell: cell)
-    }
-}
-
-extension ListOfRestaurantsTableViewController: Observer {
-    func searchButtonClicked (postCode: String) {
-        if postCode.count>1 {
-            displaySpinner()
-            listOfRestaurantsPresenter?.getRestaurants(by: postCode)
-        }
-    }
-
-    func locationButtonClicked() {
-        listOfRestaurantsPresenter?.getLocation()
     }
 }
 

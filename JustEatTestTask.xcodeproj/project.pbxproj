@@ -14,13 +14,13 @@
 		C792AC2E25E03B1300D38243 /* SearchFieldView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C792AC2D25E03B1300D38243 /* SearchFieldView.swift */; };
 		C792AC7E25E1964800D38243 /* ListOfRestaurantsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C792AC7D25E1964800D38243 /* ListOfRestaurantsTests.swift */; };
 		C792AC8F25E3BBB500D38243 /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C792AC8E25E3BBB500D38243 /* LocationManager.swift */; };
+		C7C88AE825EB95620094AB2D /* JustEatTestTaskUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7C88AE725EB95620094AB2D /* JustEatTestTaskUITests.swift */; };
 		C7F3F1D225DFF88100451F8B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F3F1D125DFF88100451F8B /* AppDelegate.swift */; };
 		C7F3F1D925DFF88100451F8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7F3F1D725DFF88100451F8B /* Main.storyboard */; };
 		C7F3F1DB25DFF88400451F8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C7F3F1DA25DFF88400451F8B /* Assets.xcassets */; };
 		C7F3F1DE25DFF88400451F8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C7F3F1DC25DFF88400451F8B /* LaunchScreen.storyboard */; };
 		C7F3F1EA25E0007800451F8B /* ListOfRestaurantsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F3F1E925E0007800451F8B /* ListOfRestaurantsTableViewController.swift */; };
 		C7F3F1F325E0012C00451F8B /* ListOfRestaurantsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F3F1F225E0012C00451F8B /* ListOfRestaurantsPresenter.swift */; };
-		C7F3F1F625E0015C00451F8B /* ListOfRestaurantsConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F3F1F525E0015C00451F8B /* ListOfRestaurantsConfigurator.swift */; };
 		C7F3F1FC25E0035200451F8B /* ShortRestaurantInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F3F1FB25E0035200451F8B /* ShortRestaurantInfoTableViewCell.swift */; };
 		C7F3F20225E0075D00451F8B /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7F3F20125E0075D00451F8B /* RatingView.swift */; };
 		FC7497F42C30993166C99676 /* Pods_JustEatTestTask_ListOfRestaurantsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2FCD8CB2D41D3FB678B211E9 /* Pods_JustEatTestTask_ListOfRestaurantsTests.framework */; };
@@ -28,6 +28,13 @@
 
 /* Begin PBXContainerItemProxy section */
 		C792AC8025E1964800D38243 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = C7F3F1C625DFF88100451F8B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C7F3F1CD25DFF88100451F8B;
+			remoteInfo = JustEatTestTask;
+		};
+		C7C88AEA25EB95620094AB2D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = C7F3F1C625DFF88100451F8B /* Project object */;
 			proxyType = 1;
@@ -50,6 +57,9 @@
 		C792AC7D25E1964800D38243 /* ListOfRestaurantsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfRestaurantsTests.swift; sourceTree = "<group>"; };
 		C792AC7F25E1964800D38243 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C792AC8E25E3BBB500D38243 /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		C7C88AE525EB95620094AB2D /* JustEatTestTaskUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JustEatTestTaskUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7C88AE725EB95620094AB2D /* JustEatTestTaskUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JustEatTestTaskUITests.swift; sourceTree = "<group>"; };
+		C7C88AE925EB95620094AB2D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7F3F1CE25DFF88100451F8B /* JustEatTestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JustEatTestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7F3F1D125DFF88100451F8B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C7F3F1D825DFF88100451F8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -58,7 +68,6 @@
 		C7F3F1DF25DFF88400451F8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C7F3F1E925E0007800451F8B /* ListOfRestaurantsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfRestaurantsTableViewController.swift; sourceTree = "<group>"; };
 		C7F3F1F225E0012C00451F8B /* ListOfRestaurantsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfRestaurantsPresenter.swift; sourceTree = "<group>"; };
-		C7F3F1F525E0015C00451F8B /* ListOfRestaurantsConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfRestaurantsConfigurator.swift; sourceTree = "<group>"; };
 		C7F3F1FB25E0035200451F8B /* ShortRestaurantInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortRestaurantInfoTableViewCell.swift; sourceTree = "<group>"; };
 		C7F3F20125E0075D00451F8B /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		E566AC9B721E4C838DE09C52 /* Pods-JustEatTestTask-ListOfRestaurantsTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JustEatTestTask-ListOfRestaurantsTests.debug.xcconfig"; path = "Target Support Files/Pods-JustEatTestTask-ListOfRestaurantsTests/Pods-JustEatTestTask-ListOfRestaurantsTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -70,6 +79,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC7497F42C30993166C99676 /* Pods_JustEatTestTask_ListOfRestaurantsTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7C88AE225EB95620094AB2D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -125,7 +141,6 @@
 			isa = PBXGroup;
 			children = (
 				C7F3F1F225E0012C00451F8B /* ListOfRestaurantsPresenter.swift */,
-				C7F3F1F525E0015C00451F8B /* ListOfRestaurantsConfigurator.swift */,
 				C7F3F1F025E000E000451F8B /* ListOfRestaurantsViewController */,
 			);
 			path = ListOfRestaurants;
@@ -167,11 +182,21 @@
 			path = Modules;
 			sourceTree = "<group>";
 		};
+		C7C88AE625EB95620094AB2D /* JustEatTestTaskUITests */ = {
+			isa = PBXGroup;
+			children = (
+				C7C88AE725EB95620094AB2D /* JustEatTestTaskUITests.swift */,
+				C7C88AE925EB95620094AB2D /* Info.plist */,
+			);
+			path = JustEatTestTaskUITests;
+			sourceTree = "<group>";
+		};
 		C7F3F1C525DFF88100451F8B = {
 			isa = PBXGroup;
 			children = (
 				C7F3F1D025DFF88100451F8B /* JustEatTestTask */,
 				C792AC7C25E1964800D38243 /* ListOfRestaurantsTests */,
+				C7C88AE625EB95620094AB2D /* JustEatTestTaskUITests */,
 				C7F3F1CF25DFF88100451F8B /* Products */,
 				48E20F3C3B43723BFBE14E4B /* Pods */,
 				B069E2AD43365A73CCDE2677 /* Frameworks */,
@@ -183,6 +208,7 @@
 			children = (
 				C7F3F1CE25DFF88100451F8B /* JustEatTestTask.app */,
 				C792AC7B25E1964800D38243 /* ListOfRestaurantsTests.xctest */,
+				C7C88AE525EB95620094AB2D /* JustEatTestTaskUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -260,6 +286,24 @@
 			productReference = C792AC7B25E1964800D38243 /* ListOfRestaurantsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		C7C88AE425EB95620094AB2D /* JustEatTestTaskUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C7C88AEE25EB95620094AB2D /* Build configuration list for PBXNativeTarget "JustEatTestTaskUITests" */;
+			buildPhases = (
+				C7C88AE125EB95620094AB2D /* Sources */,
+				C7C88AE225EB95620094AB2D /* Frameworks */,
+				C7C88AE325EB95620094AB2D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C7C88AEB25EB95620094AB2D /* PBXTargetDependency */,
+			);
+			name = JustEatTestTaskUITests;
+			productName = JustEatTestTaskUITests;
+			productReference = C7C88AE525EB95620094AB2D /* JustEatTestTaskUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		C7F3F1CD25DFF88100451F8B /* JustEatTestTask */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = C7F3F1E225DFF88400451F8B /* Build configuration list for PBXNativeTarget "JustEatTestTask" */;
@@ -293,6 +337,10 @@
 						CreatedOnToolsVersion = 12.4;
 						TestTargetID = C7F3F1CD25DFF88100451F8B;
 					};
+					C7C88AE425EB95620094AB2D = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = C7F3F1CD25DFF88100451F8B;
+					};
 					C7F3F1CD25DFF88100451F8B = {
 						CreatedOnToolsVersion = 12.4;
 					};
@@ -313,6 +361,7 @@
 			targets = (
 				C7F3F1CD25DFF88100451F8B /* JustEatTestTask */,
 				C792AC7A25E1964800D38243 /* ListOfRestaurantsTests */,
+				C7C88AE425EB95620094AB2D /* JustEatTestTaskUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -323,6 +372,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C717821025E3EC85007DFFA9 /* RestaurantJSON.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C7C88AE325EB95620094AB2D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,6 +484,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		C7C88AE125EB95620094AB2D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C7C88AE825EB95620094AB2D /* JustEatTestTaskUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C7F3F1CA25DFF88100451F8B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -439,7 +503,6 @@
 				C7F3F1EA25E0007800451F8B /* ListOfRestaurantsTableViewController.swift in Sources */,
 				C7F3F1D225DFF88100451F8B /* AppDelegate.swift in Sources */,
 				C792ABEC25E0179800D38243 /* Restaurant.swift in Sources */,
-				C7F3F1F625E0015C00451F8B /* ListOfRestaurantsConfigurator.swift in Sources */,
 				C7F3F1F325E0012C00451F8B /* ListOfRestaurantsPresenter.swift in Sources */,
 				C792AC2E25E03B1300D38243 /* SearchFieldView.swift in Sources */,
 			);
@@ -452,6 +515,11 @@
 			isa = PBXTargetDependency;
 			target = C7F3F1CD25DFF88100451F8B /* JustEatTestTask */;
 			targetProxy = C792AC8025E1964800D38243 /* PBXContainerItemProxy */;
+		};
+		C7C88AEB25EB95620094AB2D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C7F3F1CD25DFF88100451F8B /* JustEatTestTask */;
+			targetProxy = C7C88AEA25EB95620094AB2D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -514,6 +582,44 @@
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JustEatTestTask.app/JustEatTestTask";
+			};
+			name = Release;
+		};
+		C7C88AEC25EB95620094AB2D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 49AM85TS2Z;
+				INFOPLIST_FILE = JustEatTestTaskUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mdeshina.JustEatTestTaskUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = JustEatTestTask;
+			};
+			name = Debug;
+		};
+		C7C88AED25EB95620094AB2D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 49AM85TS2Z;
+				INFOPLIST_FILE = JustEatTestTaskUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = mdeshina.JustEatTestTaskUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = JustEatTestTask;
 			};
 			name = Release;
 		};
@@ -681,6 +787,15 @@
 			buildConfigurations = (
 				C792AC8325E1964800D38243 /* Debug */,
 				C792AC8425E1964800D38243 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C7C88AEE25EB95620094AB2D /* Build configuration list for PBXNativeTarget "JustEatTestTaskUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C7C88AEC25EB95620094AB2D /* Debug */,
+				C7C88AED25EB95620094AB2D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -38,6 +38,16 @@
                ReferencedContainer = "container:JustEatTestTask.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "C7C88AE425EB95620094AB2D"
+               BuildableName = "JustEatTestTaskUITests.xctest"
+               BlueprintName = "JustEatTestTaskUITests"
+               ReferencedContainer = "container:JustEatTestTask.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

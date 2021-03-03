@@ -6,7 +6,7 @@ struct Restaurant {
     var name: String
     var logo: Logo
     var cuisineTypes: [String]
-
+    
     func transformCuisineTypesToString(array: [String]) -> String {
         return array.map {$0}.joined(separator: ", ")
     }

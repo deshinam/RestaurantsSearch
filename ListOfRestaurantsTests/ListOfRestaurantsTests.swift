@@ -5,7 +5,6 @@ import SwiftyJSON
 
 class ListOfRestaurantsTests: XCTestCase {
 
-    // MARK: — UI Tests
     func testCellDisplayWithDefaultLogo() throws {
         // Arrange
         let cell = ShortRestaurantInfoTableViewCell()
@@ -22,7 +21,6 @@ class ListOfRestaurantsTests: XCTestCase {
         XCTAssertEqual(cell.ratingView.starValueLabel.text, String(restaurant.rating))
     }
 
-    // MARK: — Unit Tests
     func testRestaurantMappingFromJSONToObject() throws {
         // Arrange
         var restaurant: Restaurant?
@@ -51,4 +49,7 @@ class ListOfRestaurantsTests: XCTestCase {
         XCTAssertEqual(restaurant?.logo.url, "https://d30v2pzvrfyzpo.cloudfront.net/uk/images/restaurants/97680.gif")
     }
 
+    func testEndtoEnd() throws {
+        
+    }
 }

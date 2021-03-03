@@ -12,22 +12,24 @@ protocol ListOfRestaurantsPresenterProtocol {
 final class ListOfRestaurantsPresenter {
     // MARK: — Public Properties
     public var restaurants: [Restaurant] = [Restaurant]()
-
+    
     // MARK: — Private Properties
     private let networkManager = NetworkManager.sharedNetworkManager
-    private var listOfRestaurantsTableViewController: ListOfRestaurantsTableViewControllerProtocol?
+    private weak var listOfRestaurantsTableViewController: ListOfRestaurantsTableViewControllerProtocol?
     private var locationManager: LocationManager?
-
+    
     // MARK: — Initializers
     init (viewController: ViewControllerProtocols) {
         self.listOfRestaurantsTableViewController = viewController
         locationManager = LocationManager(delegate: viewController)
     }
-
+    
     // MARK: — Private Methods
     private func updateTableView(isEmpty: Bool) {
         if self.listOfRestaurantsTableViewController != nil {
-            self.listOfRestaurantsTableViewController!.updateTableView(isEmpty: isEmpty)
+            DispatchQueue.main.async {[weak self] in
+                self?.listOfRestaurantsTableViewController!.updateTableView(isEmpty: isEmpty)
+            }
         }
     }
 }
@@ -46,26 +48,26 @@ extension ListOfRestaurantsPresenter: ListOfRestaurantsPresenterProtocol {
             self?.updateTableView(isEmpty: isEmptyFlag)
         }
     }
-
+    
     func getRestaurantsCount() -> Int? {
         return restaurants.count
     }
-
+    
     func getArray() -> [Restaurant]? {
         return restaurants
     }
-
+    
     func getCell(cell: UITableViewCell, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let restaurantCell = cell as? ShortRestaurantInfoTableViewCell else {return cell}
         restaurantCell.restaurant = restaurants[indexPath.row]
         return cell
     }
-
+    
     func willDrawCell(cell: UITableViewCell) {
         guard let restaurantCell = cell as? ShortRestaurantInfoTableViewCell else {return}
         restaurantCell.prepareForDraw()
     }
-
+    
     func getLocation() {
         locationManager?.getLocation()
     }

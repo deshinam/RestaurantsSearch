@@ -1,11 +1,6 @@
 import UIKit
 import SnapKit
 
-protocol Observer: class {
-    func searchButtonClicked (postCode: String)
-    func locationButtonClicked()
-}
-
 final class SearchFieldView: UIView {
 
     // MARK: — Private Properties
@@ -17,7 +12,7 @@ final class SearchFieldView: UIView {
         static let searchImage: UIImage = UIImage(systemName: "magnifyingglass") ?? UIImage()
         static let searchFieldPlaceholder = "Search by postcode"
     }
-
+    
     private lazy var locationButton: UIButton = {
         let button = UIButton(type: .system)
         button.contentMode = .scaleAspectFill
@@ -26,7 +21,7 @@ final class SearchFieldView: UIView {
         button.tintColor = .black
         return button
     }()
-
+    
     private lazy var searchButton: UIButton = {
         let button = UIButton(type: .system)
         button.contentMode = .scaleAspectFill
@@ -36,7 +31,8 @@ final class SearchFieldView: UIView {
         button.backgroundColor = .systemOrange
         return button
     }()
-
+    
+    // MARK: — Internal Properties
     internal lazy var searchTextField: UITextField = {
         let textField = UITextField()
         textField.translatesAutoresizingMaskIntoConstraints = false
@@ -44,36 +40,36 @@ final class SearchFieldView: UIView {
         return textField
     }()
 
-    private lazy var searchButtonObservers = [Observer]()
-    private lazy var locationButtonObservers = [Observer]()
+    internal var locationButtonTappedAction: (()->())?
+    internal var searchPostCodeButtonTappedAction: ((String)->())?
 
     // MARK: — Initializers
     override init(frame: CGRect) {
         super.init(frame: frame)
         setUpView()
     }
-
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-
+    
     // MARK: — Private Methods
     private func setUpView() {
         self.layer.borderColor = UIColor.systemOrange.cgColor
         self.layer.borderWidth = 1
-
+        
         addSubview(searchTextField)
         addSubview(locationButton)
         addSubview(searchButton)
-
+        
         searchButton.snp.makeConstraints { make in
             make.top.equalTo(self.snp.top)
             make.bottom.equalTo(self.snp.bottom)
             make.trailing.equalTo(self.snp.trailing)
             make.width.equalTo(50)
         }
-        searchButton.addTarget(self, action: #selector(searchCityButtonTapped(sender:)), for: .touchUpInside)
-
+        searchButton.addTarget(self, action: #selector(searchRestaurantsButtonTapped(sender:)), for: .touchUpInside)
+        
         locationButton.snp.makeConstraints { make in
             make.top.equalTo(self.snp.top)
             make.bottom.equalTo(self.snp.bottom)
@@ -81,7 +77,7 @@ final class SearchFieldView: UIView {
             make.width.equalTo(40)
         }
         locationButton.addTarget(self, action: #selector(locationButtonTapped(sender:)), for: .touchUpInside)
-
+        
         searchTextField.snp.makeConstraints { make in
             make.leading.equalTo(self.snp.leading).inset(10)
             make.top.equalTo(self.snp.top)
@@ -89,40 +85,24 @@ final class SearchFieldView: UIView {
             make.trailing.equalTo(locationButton.snp.trailing).inset(10)
         }
         searchTextField.becomeFirstResponder()
-        searchTextField.addTarget(self, action: #selector(searchCityButtonTapped(sender:)), for: .editingDidEndOnExit)
+        searchTextField.addTarget(self, action: #selector(searchRestaurantsButtonTapped(sender:)), for: .editingDidEndOnExit)
     }
-
-    @objc private func searchCityButtonTapped(sender: UIButton) {
-        searchButtonObservers.forEach({ $0.searchButtonClicked(postCode: searchTextField.text ?? "")})
+    
+    @objc private func searchRestaurantsButtonTapped(sender: UIButton) {
+        if let action = searchPostCodeButtonTappedAction {
+            action(searchTextField.text ?? "")
+        }
         searchTextField.resignFirstResponder()
     }
-
+    
     @objc private func locationButtonTapped(sender: UIButton) {
-        locationButtonObservers.forEach({ $0.locationButtonClicked()})
+        if let action = locationButtonTappedAction {
+            action()
+        }
         searchTextField.resignFirstResponder()
     }
-
+    
     // MARK: — Public Methods
-    func subscribeSearchButton(_ observer: Observer) {
-        searchButtonObservers.append(observer)
-    }
-
-    func unsubscribeSearchButton(_ observer: Observer) {
-        if let idx = searchButtonObservers.firstIndex(where: { $0 === observer }) {
-            searchButtonObservers.remove(at: idx)
-        }
-    }
-
-    func subscribeLocationButton(_ observer: Observer) {
-        locationButtonObservers.append(observer)
-    }
-
-    func unsubscribeLocationButton(_ observer: Observer) {
-        if let idx = locationButtonObservers.firstIndex(where: { $0 === observer }) {
-            locationButtonObservers.remove(at: idx)
-        }
-    }
-
     func updatePostCode(postcode: String) {
         searchTextField.text = postcode
     }
