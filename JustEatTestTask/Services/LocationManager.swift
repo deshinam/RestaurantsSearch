@@ -10,7 +10,7 @@ protocol LocationDelegate: class {
 final class LocationManager: NSObject {
     // MARK: — Private Properties
     private weak var delegate: LocationDelegate?
-    private var locationManager: CLLocationManager
+    private var locationManager: CLLocationManager!
 
     // MARK: — Initializers
     init(delegate: LocationDelegate) {
@@ -51,9 +51,9 @@ extension LocationManager: CLLocationManagerDelegate {
         if let location = locations.first {
             CLGeocoder().reverseGeocodeLocation(location, completionHandler: {[weak self] (placemarks, _) -> Void in
                 if let newPostCode = placemarks?.compactMap({$0.postalCode}).first {
-                    self?.delegate.onLocationSuccess(newPostCode)
+                    self?.delegate?.onLocationSuccess(newPostCode)
                 } else {
-                    self?.delegate.onLocationUnavailable()
+                    self?.delegate?.onLocationUnavailable()
                 }
             })
         }
@@ -63,7 +63,7 @@ extension LocationManager: CLLocationManagerDelegate {
         if status == .authorizedAlways || status == .authorizedWhenInUse {
             if CLLocationManager.isMonitoringAvailable(for: CLBeaconRegion.self) {
                 if CLLocationManager.isRangingAvailable() {
-                    locationManager?.requestLocation()
+                    locationManager.requestLocation()
                 }
             }
         }
