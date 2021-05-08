@@ -5,4 +5,4 @@ xcode_project: JustEatTestTask.xcodeproj
 xcode_scheme: JustEatTestTask
 xcode_destination: platform=iOS Simulator,OS=14.4,name=iPhone 11
 before_install:
-- pod install
+    - pod install
