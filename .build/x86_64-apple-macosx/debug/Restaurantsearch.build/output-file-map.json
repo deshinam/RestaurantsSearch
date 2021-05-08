@@ -1,0 +1,11 @@
+{
+  "": {
+    "swift-dependencies": "/Users/masha/Desktop/Restaurantsearch/.build/x86_64-apple-macosx/debug/Restaurantsearch.build/master.swiftdeps"
+  },
+  "/Users/masha/Desktop/Restaurantsearch/Sources/Restaurantsearch/Restaurantsearch.swift": {
+    "dependencies": "/Users/masha/Desktop/Restaurantsearch/.build/x86_64-apple-macosx/debug/Restaurantsearch.build/Restaurantsearch.d",
+    "object": "/Users/masha/Desktop/Restaurantsearch/.build/x86_64-apple-macosx/debug/Restaurantsearch.build/Restaurantsearch.swift.o",
+    "swiftmodule": "/Users/masha/Desktop/Restaurantsearch/.build/x86_64-apple-macosx/debug/Restaurantsearch.build/Restaurantsearch~partial.swiftmodule",
+    "swift-dependencies": "/Users/masha/Desktop/Restaurantsearch/.build/x86_64-apple-macosx/debug/Restaurantsearch.build/Restaurantsearch.swiftdeps"
+  }
+}

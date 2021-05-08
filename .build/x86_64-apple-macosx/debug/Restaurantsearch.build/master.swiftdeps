@@ -1,0 +1,5 @@
+version: "Apple Swift version 5.3.2 (swiftlang-1200.0.45 clang-1200.0.32.28)"
+options: "e4c5310ec4dd12515b8f5a2050bb3c20"
+build_time: [1620483203, 911897000]
+inputs:
+  "/Users/masha/Desktop/Restaurantsearch/Sources/Restaurantsearch/Restaurantsearch.swift": [1620482577, 114351391]

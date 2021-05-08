@@ -1,0 +1,4 @@
+module Restaurantsearch {
+    header "/Users/masha/Desktop/Restaurantsearch/.build/x86_64-apple-macosx/debug/Restaurantsearch.build/Restaurantsearch-Swift.h"
+    requires objc
+}

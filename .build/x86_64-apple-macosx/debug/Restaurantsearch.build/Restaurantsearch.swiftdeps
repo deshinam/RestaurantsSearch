@@ -1,0 +1,22 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "Restaurantsearch"
+provides-nominal:
+- "16RestaurantsearchAAV"
+provides-member:
+- ["16RestaurantsearchAAV", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- "Restaurantsearch"
+- "StringLiteralType"
+depends-member:
+- ["16RestaurantsearchAAV", "init"]
+- ["16RestaurantsearchAAV", "text"]
+- ["s34_ExpressibleByBuiltinStringLiteralP", "init"]
+depends-nominal:
+- "16RestaurantsearchAAV"
+- "s34_ExpressibleByBuiltinStringLiteralP"
+depends-dynamic-lookup:
+depends-external:
+- "/Users/masha/Desktop/Restaurantsearch/.build/x86_64-apple-macosx/debug/Restaurantsearch.build/module.modulemap"
+interface-hash: "146311db83f6dd211ad53c68c2690d36"

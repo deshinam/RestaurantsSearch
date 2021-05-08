@@ -1,0 +1,19 @@
+{
+  "builtTestProducts" : [
+    {
+      "binaryPath" : "\/Users\/masha\/Desktop\/Restaurantsearch\/.build\/x86_64-apple-macosx\/debug\/RestaurantsearchPackageTests.xctest\/Contents\/MacOS\/RestaurantsearchPackageTests",
+      "packageName" : "Restaurantsearch",
+      "productName" : "RestaurantsearchPackageTests"
+    }
+  ],
+  "copyCommands" : {
+
+  },
+  "swiftTargetMap" : {
+    "C.Restaurantsearch-debug.module" : "Restaurantsearch",
+    "C.RestaurantsearchTests-debug.module" : "RestaurantsearchTests"
+  },
+  "testDiscoveryCommands" : {
+
+  }
+}
