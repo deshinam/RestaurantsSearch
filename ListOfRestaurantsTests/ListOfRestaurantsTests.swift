@@ -9,7 +9,7 @@ class ListOfRestaurantsTests: XCTestCase {
         // Arrange
         let cell = ShortRestaurantInfoTableViewCell()
         let restaurant = Restaurant(rating: 4.5, name: "Tapchan", logo: Logo(url: "", image: nil), cuisineTypes: ["American", "123"])
-        let restImage = restaurant.logo.image ?? UIImage(systemName: "timelapse")
+        //let restImage = restaurant.logo.image ?? UIImage(systemName: "timelapse")
 
         // Act
         cell.restaurant = restaurant
